@@ -11,8 +11,7 @@ import urllib
 import asyncpg
 
 
-DATABASE_URL = "postgres://fshtyhhiulhtzg:97424b89fbbd6064e6ae2b3e1ed2d2a1f6b71262564d8e95f5e39f2100f81854@ec2-34-194-130-103.compute-1.amazonaws.com:5432/d7hinhs2mfl3om
-"
+DATABASE_URL = "postgres://fshtyhhiulhtzg:97424b89fbbd6064e6ae2b3e1ed2d2a1f6b71262564d8e95f5e39f2100f81854@ec2-34-194-130-103.compute-1.amazonaws.com:5432/d7hinhs2mfl3om"
 
 #creacion de variables para establecer la conexion a la base de datos 
 host_server = os.environ.get('host_server', 'localhost')
@@ -23,7 +22,7 @@ db_password = urllib.parse.quote_plus(str(os.environ.get('db_password', '1234'))
 ssl_mode = urllib.parse.quote_plus(str(os.environ.get('ssl_mode','prefer')))
 
 #se establece la conexion
-DATABASE_URL = 'postgresql://{}:{}@{}:{}/{}?sslmode={}'.format(db_username, db_password, host_server, db_server_port, database_name, ssl_mode)
+#DATABASE_URL = 'postgresql://{}:{}@{}:{}/{}?sslmode={}'.format(db_username, db_password, host_server, db_server_port, database_name, ssl_mode)
 
 database = databases.Database(DATABASE_URL)
 
